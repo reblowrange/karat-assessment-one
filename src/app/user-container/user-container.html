@@ -1,3 +1,10 @@
 Child - Random generated number: <strong> {{randomGeneratedId}} </strong>
-<br/>
+<br />
 <app-user-card-component [user]="user" (onGeneratedId)="onGeneratedId($event)"></app-user-card-component>
+
+
+<mat-list role="list">
+    @for (user of data$ | async; track user) {
+    <mat-list-item role="listitem">{{ user.name }}</mat-list-item>
+    }
+</mat-list>
