@@ -11,7 +11,6 @@ Ensure the following are installed:
 - Node.js (v16+ recommended)
 - npm
 - Angular project already set up
-
 ---
 
 ## 📂 Project Structure
