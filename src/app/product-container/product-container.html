@@ -1,0 +1,15 @@
+<mat-list role="list">
+    @for (product of products; track product) {
+    <mat-list-item role="listitem">
+      <strong>{{ product.name }}</strong> –
+      
+      @if (product.stock === 0) {
+        <span style="color: red; font-weight: bold;">
+          Out of Stock
+        </span>
+      } @else {
+        {{ product.stock }}
+      }
+    </mat-list-item>
+  }
+</mat-list>
