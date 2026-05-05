@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Swapnil Sonkusare",
+      "email": "swapnil@email.com",
+      "role": "Developer"
+    },
+    {
+      "id": 2,
+      "name": "John Doe",
+      "email": "john@email.com",
+      "role": "Admin"
+    }
+  ]
+}
