@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { Home } from './home/home';
 import { StringListComponent } from './string-list-component/string-list-component';
+import { UserContainer } from './user-container/user-container';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -11,6 +12,10 @@ export const routes: Routes = [
       {
         path: 'string-list',
         component: StringListComponent,
+      },
+      {
+        path: 'user-container',
+        component: UserContainer,
       },
     ],
   },
