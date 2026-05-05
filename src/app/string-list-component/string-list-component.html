@@ -2,7 +2,7 @@
     <mat-label>Enter text to add item</mat-label>
     <input matInput [(ngModel)]="inputValue" placeholder="Enter Text">
 </mat-form-field>
-<button (click)="addItem()" matButton="elevated">Add</button>
+<button (click)="addItem()" matButton="filled">Add</button>
 
 <mat-list role="list">
     <mat-list-item role="listitem" *ngFor="let item of items ; let i = index;">{{i+1}}. - {{ item }}</mat-list-item>

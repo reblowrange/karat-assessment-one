@@ -1,2 +1,2 @@
-<app-user-card-component
-[user]="user"></app-user-card-component>
+Child - Random generated number: <strong> {{randomGeneratedId}} </strong>
+<app-user-card-component [user]="user" (onGeneratedId)="onGeneratedId($event)"></app-user-card-component>

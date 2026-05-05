@@ -10,4 +10,9 @@ import { User } from '../models/common.model';
 })
 export class UserContainer {
   public user = {name: 'Swapnil', email: 'swapnil@ltm.com'} as User;
+  public randomGeneratedId = NaN;
+
+  public onGeneratedId(randomId: number): void {
+    this.randomGeneratedId = randomId;
+  }
 }
