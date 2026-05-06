@@ -18,12 +18,12 @@ export const routes: Routes = [
       {
         path: 'string-list',
         component: StringListComponent,
-        canActivate: [AuthGuard]
+        canActivate: [AuthGuard],
       },
       {
         path: 'user-container',
         component: UserContainer,
-        canActivate: [AuthGuard]
+        canActivate: [AuthGuard],
       },
       {
         path: 'product-container',
@@ -39,7 +39,7 @@ export const routes: Routes = [
       {
         path: 'form-container',
         component: FormContainer,
-        canActivate: [AuthGuard]
+        canActivate: [AuthGuard],
       },
       {
         path: 'login',
@@ -51,6 +51,10 @@ export const routes: Routes = [
       },
       { path: '**', redirectTo: 'login' },
     ],
+  },
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin/admin-module').then((x) => x.AdminModule),
   },
   { path: '**', redirectTo: 'home' },
 ];
