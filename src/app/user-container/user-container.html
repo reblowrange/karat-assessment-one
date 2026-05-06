@@ -2,14 +2,14 @@ Child - Random generated number: <strong> {{randomGeneratedId}} </strong>
 <br />
 <app-user-card-component [user]="user" (onGeneratedId)="onGeneratedId($event)"></app-user-card-component>
 <hr />
-<h4>Async users from db</h4>
+<h3>Async users from db</h3>
 <mat-list role="list">
     @for (user of data$ | async; track user) {
     <mat-list-item role="listitem">{{ `${user.name} - ${user.email}` }}</mat-list-item>
     }
 </mat-list>
 <hr />
-<h4>Email Form with validation</h4>
+<h3>Email Form with validation</h3>
 <form [formGroup]="emailForm" class="email-form" novalidate>
 
     <mat-form-field appearance="outline" style="width: 100%;">
@@ -26,3 +26,6 @@ Child - Random generated number: <strong> {{randomGeneratedId}} </strong>
         }
     </mat-form-field>
 </form>
+<hr/>
+<h3>Truncate string (Limit 12)</h3>
+<p>{{'Swpanil Sonkusare' | truncate:12}}</p>

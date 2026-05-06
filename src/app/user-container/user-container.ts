@@ -6,10 +6,11 @@ import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../libs/material-module';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { TruncatePipe } from '../pipes/truncate-pipe';
 
 @Component({
   selector: 'app-user-container',
-  imports: [CommonModule, MaterialModule, UserCardComponent],
+  imports: [CommonModule, MaterialModule, UserCardComponent, TruncatePipe],
   templateUrl: './user-container.html',
   styleUrl: './user-container.scss',
 })
