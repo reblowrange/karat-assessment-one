@@ -1,0 +1,22 @@
+<strong>Click "Add alias" button </strong>
+<button matButton="filled" (click)="addAlias()">
+    Add Alias
+</button>
+<form [formGroup]="aliasForm">
+    <div formArrayName="aliases">
+        @for (alias of aliases.controls; let i = $index; track i) {
+
+        <mat-form-field appearance="outline" style="width: 50%;">
+            <mat-label>Alias {{ i + 1 }}</mat-label>
+
+            <input matInput [formControlName]="i" placeholder="Enter alias" />
+
+            <button mat-icon-button matSuffix type="button" (click)="removeAlias(i)">
+                ✕
+            </button>
+        </mat-form-field>
+
+        }
+    </div>
+
+</form>
