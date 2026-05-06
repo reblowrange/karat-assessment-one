@@ -1,10 +1,28 @@
 Child - Random generated number: <strong> {{randomGeneratedId}} </strong>
 <br />
 <app-user-card-component [user]="user" (onGeneratedId)="onGeneratedId($event)"></app-user-card-component>
-
-
+<hr />
+<h4>Async users from db</h4>
 <mat-list role="list">
     @for (user of data$ | async; track user) {
-    <mat-list-item role="listitem">{{ user.name }}</mat-list-item>
+    <mat-list-item role="listitem">{{ `${user.name} - ${user.email}` }}</mat-list-item>
     }
 </mat-list>
+<hr />
+<h4>Email Form with validation</h4>
+<form [formGroup]="emailForm" class="email-form" novalidate>
+
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Email</mat-label>
+
+        <input matInput type="email" formControlName="email" placeholder="Enter your email" />
+
+        @if (emailForm.get('email')?.hasError('required')) {
+        <mat-error>Email is required</mat-error>
+        }
+
+        @if (emailForm.get('email')?.hasError('email')) {
+        <mat-error>Please enter a valid email address</mat-error>
+        }
+    </mat-form-field>
+</form>

@@ -4,10 +4,12 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [],
   imports: [CommonModule],
-  exports: [MatInputModule, MatButtonModule, MatListModule, MatCardModule],
+  exports: [MatInputModule, MatButtonModule, MatListModule, MatCardModule, MatFormFieldModule, ReactiveFormsModule],
 })
 export class MaterialModule {}
