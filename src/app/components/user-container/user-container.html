@@ -11,9 +11,9 @@ Child - Random generated number: <strong> {{randomGeneratedId}} </strong>
 <hr />
 <h3>Email Form with validation</h3>
 <button matButton="filled" (click)="focusEmail()">
-  Focus Email
+    Focus Email
 </button>
-<br/><br/>
+<br /><br />
 <form [formGroup]="emailForm" class="email-form" novalidate>
     <mat-form-field appearance="outline" style="width: 100%;">
         <mat-label>Email</mat-label>
@@ -29,6 +29,14 @@ Child - Random generated number: <strong> {{randomGeneratedId}} </strong>
         }
     </mat-form-field>
 </form>
-<hr/>
+<hr />
 <h3>Truncate string (Limit 12)</h3>
 <p>{{'Swpanil Sonkusare' | truncate:12}}</p>
+<hr />
+<app-custom-card>
+    <h3 card-title>User Details</h3>
+
+    <p>This is custom HTML passed into the card body.</p>
+
+    <button matButton="filled">Save</button>
+</app-custom-card>
