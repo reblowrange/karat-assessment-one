@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { YellowHighlight } from '@app/directives/yellow-highlight';
 import { MaterialModule } from '@app/libs/material-module';
 
 @Component({
   selector: 'app-form-container',
-  imports: [MaterialModule],
+  imports: [MaterialModule, YellowHighlight],
   templateUrl: './form-container.html',
   styleUrl: './form-container.scss',
 })
