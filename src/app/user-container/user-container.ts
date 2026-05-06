@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { UserCardComponent } from '../user-card-component/user-card-component';
 import { User } from '../models/common.model';
 import { RestService } from '../service/rest.service';
@@ -16,28 +16,35 @@ import { AuthService } from '../service/auth.service';
   styleUrl: './user-container.scss',
 })
 export class UserContainer implements OnInit {
+  @ViewChild('emailInput') emailInput!: ElementRef<HTMLInputElement>;
+
   public user = { name: 'Swapnil', email: 'swapnil@ltm.com' } as User;
   public randomGeneratedId = NaN;
   public data$: Observable<User[]>;
   public emailForm: FormGroup;
 
-  constructor(public restService: RestService, private authService: AuthService) {
+  constructor(
+    public restService: RestService,
+    private authService: AuthService,
+  ) {
     this.data$ = this.restService.getUsers();
 
     this.emailForm = new FormGroup({
       email: new FormControl('', [Validators.required, Validators.email]),
     });
-
   }
 
   ngOnInit(): void {
-    this.authService.login().subscribe(res => {
-      if (res)
-        console.log("Login Success")
+    this.authService.login().subscribe((res) => {
+      if (res) console.log('Login Success');
     });
   }
 
   public onGeneratedId(randomId: number): void {
     this.randomGeneratedId = randomId;
+  }
+
+  public focusEmail(): void {
+    this.emailInput.nativeElement.focus();
   }
 }

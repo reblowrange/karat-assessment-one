@@ -10,12 +10,15 @@ Child - Random generated number: <strong> {{randomGeneratedId}} </strong>
 </mat-list>
 <hr />
 <h3>Email Form with validation</h3>
+<button matButton="filled" (click)="focusEmail()">
+  Focus Email
+</button>
+<br/><br/>
 <form [formGroup]="emailForm" class="email-form" novalidate>
-
     <mat-form-field appearance="outline" style="width: 100%;">
         <mat-label>Email</mat-label>
 
-        <input matInput type="email" formControlName="email" placeholder="Enter your email" />
+        <input #emailInput matInput type="email" formControlName="email" placeholder="Enter your email" />
 
         @if (emailForm.get('email')?.hasError('required')) {
         <mat-error>Email is required</mat-error>
