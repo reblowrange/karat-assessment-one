@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../libs/material-module';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { TruncatePipe } from '../pipes/truncate-pipe';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-user-container',
@@ -20,14 +21,21 @@ export class UserContainer implements OnInit {
   public data$: Observable<User[]>;
   public emailForm: FormGroup;
 
-  constructor(public restService: RestService) {
+  constructor(public restService: RestService, private authService: AuthService) {
     this.data$ = this.restService.getUsers();
+
     this.emailForm = new FormGroup({
       email: new FormControl('', [Validators.required, Validators.email]),
     });
+
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.authService.login().subscribe(res => {
+      if (res)
+        console.log("Login Success")
+    });
+  }
 
   public onGeneratedId(randomId: number): void {
     this.randomGeneratedId = randomId;
