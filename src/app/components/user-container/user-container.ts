@@ -9,8 +9,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MaterialModule } from '@app/libs/material-module';
 import { User } from '@app/models/common.model';
 import { TruncatePipe } from '@app/pipes/truncate-pipe';
-import { AuthService } from '@app/service/auth.service';
 import { RestService } from '@app/service/rest.service';
+import { AuthService } from '@app/service/auth.service';
 import { CustomCard } from '../custom-card/custom-card';
 
 @Component({

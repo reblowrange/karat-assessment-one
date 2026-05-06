@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { MaterialModule } from '@app/libs/material-module';
 import { User } from '@app/models/common.model';
 
@@ -7,7 +7,8 @@ import { User } from '@app/models/common.model';
   selector: 'app-user-card-component',
   templateUrl: './user-card-component.html',
   styleUrl: './user-card-component.scss',
-  imports: [MaterialModule]
+  imports: [MaterialModule],
+  changeDetection: ChangeDetectionStrategy.OnPush // With this component only detech change if user (@Input) get reassigned from the parent
 })
 export class UserCardComponent {
   @Input() user = {} as User;
