@@ -5,6 +5,8 @@ import { StringListComponent } from './components/string-list-component/string-l
 import { UserContainer } from './components/user-container/user-container';
 import { Home } from './home/home';
 import { FormContainer } from './components/form-container/form-container';
+import { LoginComponent } from './components/login-component/login-component';
+import { AuthGuard } from './core/auth-guard';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -15,14 +17,17 @@ export const routes: Routes = [
       {
         path: 'string-list',
         component: StringListComponent,
+        canActivate: [AuthGuard]
       },
       {
         path: 'user-container',
         component: UserContainer,
+        canActivate: [AuthGuard]
       },
       {
         path: 'product-container',
         component: ProductContainer,
+        canActivate: [AuthGuard],
         children: [
           {
             path: 'product/:id',
@@ -33,7 +38,13 @@ export const routes: Routes = [
       {
         path: 'form-container',
         component: FormContainer,
+        canActivate: [AuthGuard]
       },
+      {
+        path: 'login',
+        component: LoginComponent,
+      },
+      { path: '**', redirectTo: 'login' },
     ],
   },
   { path: '**', redirectTo: 'home' },

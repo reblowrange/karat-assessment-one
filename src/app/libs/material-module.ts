@@ -1,14 +1,22 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
-import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [],
-  exports: [MatInputModule, MatButtonModule, MatListModule, MatCardModule, MatFormFieldModule, ReactiveFormsModule],
+  exports: [
+    MatInputModule,
+    MatButtonModule,
+    MatListModule,
+    MatCardModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatSlideToggleModule
+  ],
 })
 export class MaterialModule {}

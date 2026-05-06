@@ -5,7 +5,16 @@ import { Observable, of } from 'rxjs';
   providedIn: 'root',
 })
 export class AuthService {
-  public login(): Observable<boolean>{
+  private loggedIn = false;
+  public login(): Observable<boolean> {
     return of(true);
+  }
+
+  public isLoggedIn(): boolean {
+    return this.loggedIn;
+  }
+
+  public setLoggedIn(val: boolean): void {
+    this.loggedIn = val;
   }
 }
