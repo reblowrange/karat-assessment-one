@@ -12,5 +12,27 @@
       "email": "john@email.com",
       "role": "Admin"
     }
+  ],
+  "search": [
+    { "id": 1, "name": "Apple" },
+    { "id": 2, "name": "Banana" },
+    { "id": 3, "name": "Orange" },
+    { "id": 4, "name": "Mango" },
+    { "id": 5, "name": "Grapes" },
+    { "id": 6, "name": "Pineapple" },
+    { "id": 7, "name": "Strawberry" },
+    { "id": 8, "name": "Watermelon" },
+    { "id": 9, "name": "Papaya" },
+    { "id": 10, "name": "Guava" },
+    { "id": 11, "name": "Kiwi" },
+    { "id": 12, "name": "Pomegranate" },
+    { "id": 13, "name": "Peach" },
+    { "id": 14, "name": "Pear" },
+    { "id": 15, "name": "Cherry" },
+    { "id": 16, "name": "Lemon" },
+    { "id": 17, "name": "Coconut" },
+    { "id": 18, "name": "Blueberry" },
+    { "id": 19, "name": "Plum" },
+    { "id": 20, "name": "Apricot" }
   ]
 }

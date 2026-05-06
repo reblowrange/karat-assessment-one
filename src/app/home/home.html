@@ -3,7 +3,10 @@
   <li><a routerLink="user-container">User Container</a></li>
   <li><a routerLink="product-container">Product Container</a></li>
   <li><a routerLink="form-container">Form Container</a></li>
-  <li><a style="zoom: 0.8;"><mat-slide-toggle [checked]="authService.isLoggedIn()" (change)="loginSwitch($event)"></mat-slide-toggle>&nbsp; {{authService.isLoggedIn() ? 'Logout' : 'Login'}} </a></li>
+  <li><a routerLink="search">Search</a></li>
+  <li><a style="zoom: 0.8;">
+      <mat-slide-toggle [checked]="authService.isLoggedIn()" (change)="loginSwitch($event)"></mat-slide-toggle>&nbsp;
+      {{authService.isLoggedIn() ? 'Logout' : 'Login'}} </a></li>
 </ul>
-<br/>
+<br />
 <router-outlet></router-outlet>

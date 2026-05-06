@@ -1,12 +1,13 @@
 import { Routes } from '@angular/router';
-import { ProductContainer } from './components/product-container/product-container';
-import { ProductDetailsComponent } from './components/product-details.component/product-details.component';
-import { StringListComponent } from './components/string-list-component/string-list-component';
-import { UserContainer } from './components/user-container/user-container';
-import { Home } from './home/home';
 import { FormContainer } from './components/form-container/form-container';
 import { LoginComponent } from './components/login-component/login-component';
+import { ProductContainer } from './components/product-container/product-container';
+import { ProductDetailsComponent } from './components/product-details.component/product-details.component';
+import { SearchComponent } from './components/search-component/search-component';
+import { StringListComponent } from './components/string-list-component/string-list-component';
+import { UserContainer } from './components/user-container/user-container';
 import { AuthGuard } from './core/auth-guard';
+import { Home } from './home/home';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -43,6 +44,10 @@ export const routes: Routes = [
       {
         path: 'login',
         component: LoginComponent,
+      },
+      {
+        path: 'search',
+        component: SearchComponent,
       },
       { path: '**', redirectTo: 'login' },
     ],
