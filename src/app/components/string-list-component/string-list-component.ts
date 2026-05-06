@@ -1,13 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { MaterialModule } from '../libs/material-module';
+import { MaterialModule } from '@app/libs/material-module';
+
+
 
 @Component({
   selector: 'app-string-list-component',
   imports: [CommonModule, FormsModule, MaterialModule],
   templateUrl: './string-list-component.html',
-  standalone: true,
   styleUrl: './string-list-component.scss',
 })
 export class StringListComponent {

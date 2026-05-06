@@ -3,7 +3,6 @@ import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-product-details.component',
-  imports: [],
   templateUrl: './product-details.component.html',
   styleUrl: './product-details.component.scss',
 })

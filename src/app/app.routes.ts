@@ -1,9 +1,10 @@
 import { Routes } from '@angular/router';
+import { ProductContainer } from './components/product-container/product-container';
+import { ProductDetailsComponent } from './components/product-details.component/product-details.component';
+import { StringListComponent } from './components/string-list-component/string-list-component';
+import { UserContainer } from './components/user-container/user-container';
 import { Home } from './home/home';
-import { StringListComponent } from './string-list-component/string-list-component';
-import { UserContainer } from './user-container/user-container';
-import { ProductContainer } from './product-container/product-container';
-import { ProductDetailsComponent } from './product-details.component/product-details.component';
+
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },

@@ -1,12 +1,13 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { User } from '../models/common.model';
-import { MaterialModule } from '../libs/material-module';
+import { MaterialModule } from '@app/libs/material-module';
+import { User } from '@app/models/common.model';
+
 
 @Component({
   selector: 'app-user-card-component',
-  imports: [MaterialModule],
   templateUrl: './user-card-component.html',
   styleUrl: './user-card-component.scss',
+  imports: [MaterialModule]
 })
 export class UserCardComponent {
   @Input() user = {} as User;

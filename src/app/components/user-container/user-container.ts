@@ -1,13 +1,17 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { UserCardComponent } from '../user-card-component/user-card-component';
-import { User } from '../models/common.model';
-import { RestService } from '../service/rest.service';
-import { Observable } from 'rxjs';
+
+
 import { CommonModule } from '@angular/common';
-import { MaterialModule } from '../libs/material-module';
+import { Observable } from 'rxjs';
+
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { TruncatePipe } from '../pipes/truncate-pipe';
-import { AuthService } from '../service/auth.service';
+
+import { MaterialModule } from '@app/libs/material-module';
+import { User } from '@app/models/common.model';
+import { TruncatePipe } from '@app/pipes/truncate-pipe';
+import { RestService } from '@app/service/rest.service';
+import { AuthService } from '@app/service/auth.service';
 
 @Component({
   selector: 'app-user-container',

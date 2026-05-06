@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { Product } from '../models/common.model';
 import { CommonModule } from '@angular/common';
-import { MaterialModule } from '../libs/material-module';
 import { RouterLink, RouterOutlet } from "@angular/router";
+import { Product } from '@app/models/common.model';
+import { MaterialModule } from '@app/libs/material-module';
 
 @Component({
   selector: 'app-product-container',
-  imports: [CommonModule, MaterialModule, RouterOutlet, RouterLink],
+  imports: [CommonModule, RouterOutlet, RouterLink, MaterialModule],
   templateUrl: './product-container.html',
   styleUrl: './product-container.scss',
 })
